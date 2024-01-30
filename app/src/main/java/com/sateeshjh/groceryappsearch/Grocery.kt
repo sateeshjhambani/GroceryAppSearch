@@ -1,6 +1,7 @@
 package com.sateeshjh.groceryappsearch
 
 import androidx.appsearch.annotation.Document
+import androidx.appsearch.annotation.Document.DoubleProperty
 import androidx.appsearch.annotation.Document.Id
 import androidx.appsearch.annotation.Document.Namespace
 import androidx.appsearch.annotation.Document.Score
@@ -31,8 +32,6 @@ data class Grocery(
         indexingType = AppSearchSchema.StringPropertyConfig.INDEXING_TYPE_PREFIXES
     )
     val seller: String,
-    @StringProperty(
-        indexingType = AppSearchSchema.StringPropertyConfig.INDEXING_TYPE_PREFIXES
-    )
-    val price: String
+    @DoubleProperty
+    val price: Double
 )
