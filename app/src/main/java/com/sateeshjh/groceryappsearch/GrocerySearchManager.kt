@@ -46,8 +46,9 @@ class GrocerySearchManager(
     suspend fun searchGroceries(query: String): List<Grocery> {
         return withContext(Dispatchers.IO) {
             val searchSpec = SearchSpec.Builder()
+                .addFilterNamespaces("mocked_groceries")
                 .setSnippetCount(10) // max search entries
-                .setRankingStrategy(SearchSpec.RANKING_STRATEGY_USAGE_COUNT)
+                .setRankingStrategy(SearchSpec.RANKING_STRATEGY_DOCUMENT_SCORE)
                 .build()
 
             val result = session?.search(

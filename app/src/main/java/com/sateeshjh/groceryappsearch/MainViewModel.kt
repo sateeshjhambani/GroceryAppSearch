@@ -13,7 +13,7 @@ class MainViewModel(
     private val grocerySearchManager: GrocerySearchManager
 ): ViewModel() {
 
-    var state by mutableStateOf(GroceryListState())
+    var state by mutableStateOf(GroceryListState(groceries = MockedGroceries.groceries))
         private set
 
     private var searchJob: Job? = null

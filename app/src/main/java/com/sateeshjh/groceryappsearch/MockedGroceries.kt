@@ -1,14 +1,12 @@
 package com.sateeshjh.groceryappsearch
 
-import java.util.UUID
-
 object MockedGroceries {
 
     val groceries = listOf(
         Grocery(
             namespace = "mocked_groceries",
-            id = UUID.randomUUID().toString(),
-            score = 1, // could be useful for a ranking based sorting logic
+            id = "1",
+            score = 2, // useful for a ranking based sorting logic
             itemTitle = "Apple Fuji",
             itemDesc = "Fresh Apples imported from Fuji",
             category = "Fruit",
@@ -17,7 +15,7 @@ object MockedGroceries {
         ),
         Grocery(
             namespace = "mocked_groceries",
-            id = UUID.randomUUID().toString(),
+            id = "2",
             score = 1,
             itemTitle = "Apple India",
             itemDesc = "Fresh Apples imported from India",
@@ -27,7 +25,7 @@ object MockedGroceries {
         ),
         Grocery(
             namespace = "mocked_groceries",
-            id = UUID.randomUUID().toString(),
+            id = "3",
             score = 1,
             itemTitle = "Apple Royal Gala US",
             itemDesc = "Fresh Apples imported from the US",
@@ -37,7 +35,7 @@ object MockedGroceries {
         ),
         Grocery(
             namespace = "mocked_groceries",
-            id = UUID.randomUUID().toString(),
+            id = "4",
             score = 1,
             itemTitle = "Potatoes",
             itemDesc = "Best used for French Fries",
@@ -47,8 +45,8 @@ object MockedGroceries {
         ),
         Grocery(
             namespace = "mocked_groceries",
-            id = UUID.randomUUID().toString(),
-            score = 1,
+            id = "5",
+            score = 2,
             itemTitle = "Cherry Tomatoes",
             itemDesc = "Best used for Salads",
             category = "Vegetable",
